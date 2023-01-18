@@ -7,4 +7,15 @@ import { Component } from '@angular/core';
 })
 export class FormloginComponent {
 
+  usu="alondra";
+  password="123";
+  incorrecto=false;
+
+  Login(usuario:string, pass:string){
+    if(usuario==this.usu && pass==this.password){
+      localStorage.setItem('login',JSON.stringify({'usuario':usuario,'password':pass,'autentificacion':true}));
+    }else{
+      this.incorrecto=true
+    }
+  }
 }

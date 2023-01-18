@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormloginComponent } from './formlogin/formlogin.component';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -9,7 +10,8 @@ import { FormloginComponent } from './formlogin/formlogin.component';
     FormloginComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule
   ], 
   exports:[
     FormloginComponent
