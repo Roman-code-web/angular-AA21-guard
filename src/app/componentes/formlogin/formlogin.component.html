@@ -1,19 +1,19 @@
 <div class="container  ">
     <div class="row d-flex justify-content-center">
         <div class="col-md-6 col-sm-8 col-xs-12">
-            <form >
+            <form [formGroup]="formLogin">
                 <div class="my-5">
                     <h2 class="text-center">login</h2>
                 </div>
                 <div class="mb-3">
                     <div class="form-floating">
-                        <input type="text" class="form-control" id="usuario" placeholder="usuario" #usuario>
+                        <input type="text" class="form-control" id="usuario" placeholder="usuario" formControlName="usuario">
                         <label for="usuario">Usuario</label>
                     </div>
                 </div>
                 <div class="mb-3">
                     <div class="form-floating">
-                        <input type="password" class="form-control" id="pass" placeholder="constraseña" #pass>
+                        <input type="password" class="form-control" id="pass" placeholder="password" formControlName="password">
                         <label for="pass">Constraseña</label>
                     </div>
                 </div>
@@ -23,9 +23,10 @@
                     </div>
                 </div>
                 <div class="mb-3 d-flex justify-content-center">
-                    <button (click)="Login(usuario.value, pass.value)" class="btn btn-primary">Ingresar</button>
+                    <button [disabled]="formLogin.invalid" (click)="login()" class="btn btn-primary">Ingresar</button>
                 </div>
               </form>
+              
         </div>
     </div>
 </div>

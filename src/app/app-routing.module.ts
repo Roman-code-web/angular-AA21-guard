@@ -1,16 +1,17 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { HomepermisosGuard } from './guard/homepermisos.guard';
+import { LoginpermisosGuard } from './guard/loginpermisos.guard';
+import { RegistropermisoGuard } from './guard/registropermiso.guard';
 import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
-import { PostComponent } from './pages/post/post.component';
 import { RegistroComponent } from './pages/registro/registro.component';
 
 const routes: Routes = [
-  {path:"", component:LoginComponent},
-  {path:"home", component:HomeComponent},
-  {path:"post", component:PostComponent},
-  {path:"registroUser", component:RegistroComponent},
-  { path: '', pathMatch: 'full', redirectTo: 'path' },
+  {path:"", component:LoginComponent, canActivate:[LoginpermisosGuard]},
+  {path:"home", component:HomeComponent, canActivate:[HomepermisosGuard]},
+  {path:"registroUser", component:RegistroComponent, canActivate:[RegistropermisoGuard]},
+  {path: '**', pathMatch: 'full', redirectTo: ''},
 ];
 
 @NgModule({

@@ -8,8 +8,9 @@
           <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
             <div class="navbar-nav">
                 <a class="nav__link__a nav-link" aria-current="page" routerLink="/home">home</a>
-                <a class="nav__link__a nav-link" aria-current="page" routerLink="/registroUser">registro usuario</a>
-                <a class="nav__link__a btn btn-outline-primary" routerLink="">Login</a>
+                <a class="nav__link__a nav-link" aria-current="page" *ngIf="loginservice.logeado" routerLink="/registroUser">registro usuario</a>
+                <a class="nav__link__a btn btn-outline-primary" *ngIf="!loginservice.logeado" routerLink="">Login</a>
+                <a class="nav__link__a btn btn-outline-primary" *ngIf="loginservice.logeado" (click)="loginservice.logout()" routerLink="">Logout</a>
             </div>
           </div>
         </div>
