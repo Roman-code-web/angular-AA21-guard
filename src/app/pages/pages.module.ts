@@ -4,6 +4,7 @@ import { HomeComponent } from './home/home.component';
 import { PostComponent } from './post/post.component';
 import { RegistroComponent } from './registro/registro.component';
 import { ComponentesModule } from '../componentes/componentes.module';
+import { LoginComponent } from './login/login.component';
 
 
 
@@ -11,7 +12,8 @@ import { ComponentesModule } from '../componentes/componentes.module';
   declarations: [
     HomeComponent,
     PostComponent,
-    RegistroComponent
+    RegistroComponent,
+    LoginComponent
   ],
   imports: [
     CommonModule,
