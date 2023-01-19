@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { LoginService } from 'src/app/servicios/login.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-formlogin',
@@ -34,7 +35,10 @@ export class FormloginComponent implements OnInit {
     if(respuesta){
       this.router.navigate(['/home']);
     }else {
-      console.log('usuario incorrecto');
+      Swal.fire({
+        icon: 'error',
+        title: 'usuario y contraseña no existe',
+      })
     }
 }
 }
