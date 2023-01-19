@@ -12,7 +12,8 @@
                     <div class="col-md-6 col-sm-12 col-xs-12">
                         <div class="mb-3 d-flex justify-content-center">
                             <mat-form-field>
-                                <input matInput #nombre placeholder="nombre" maxlength="50" formControlName="nombre" />
+                                <mat-label >nombre</mat-label>
+                                <input matInput #nombre maxlength="50" formControlName="nombre" />
                                 <mat-hint align="end">
                                 {{nombre.value.length}} / 50
                                 </mat-hint>
@@ -22,8 +23,9 @@
                     <!------apellido------>
                     <div class="col-md-6 col-sm-12 col-xs-12">
                         <div class="mb-3 d-flex justify-content-center">
-                            <mat-form-field>
-                                <input matInput #apellido placeholder="apellido" maxlength="50" formControlName="apellido" />
+                            <mat-form-field class="example-full-width">
+                                <mat-label >apellido</mat-label>
+                                <input matInput #apellido  maxlength="50" formControlName="apellido" />
                                 <mat-hint align="end">
                                 {{apellido.value.length}} / 50
                                 </mat-hint>
@@ -34,9 +36,10 @@
                     <div class="col-md-6 col-sm-12 col-xs-12">
                         <div class="mb-3 d-flex justify-content-center">
                             <mat-form-field>
-                                <input matInput #telefono placeholder="telefono" maxlength="50" formControlName="telefono" />
+                                <mat-label >telefono</mat-label>
+                                <input matInput #telefono maxlength="9" formControlName="telefono" />
                                 <mat-hint align="end">
-                                {{telefono.value.length}} / 50
+                                {{telefono.value.length}} / 9
                                 </mat-hint>
                             </mat-form-field>
                         </div>
@@ -45,7 +48,8 @@
                     <div class="col-md-6 col-sm-12 col-xs-12">
                         <div class="mb-3 d-flex justify-content-center">
                             <mat-form-field>
-                                <input matInput #direccion placeholder="direccion" maxlength="50" formControlName="direccion" />
+                                <mat-label >direccion</mat-label>
+                                <input matInput #direccion  maxlength="50" formControlName="direccion" />
                                 <mat-hint align="end">
                                 {{direccion.value.length}} / 50
                                 </mat-hint>
@@ -56,9 +60,10 @@
                     <div class="col-md-6 col-sm-12 col-xs-12">
                         <div class="mb-3 d-flex justify-content-center">
                             <mat-form-field>
-                                <input matInput #usuario placeholder="usuario" maxlength="50" formControlName="usuario" />
+                                <mat-label >usuario</mat-label>
+                                <input matInput #usuario placeholder="usuario" maxlength="20" formControlName="usuario" />
                                 <mat-hint align="end">
-                                {{usuario.value.length}} / 50
+                                {{usuario.value.length}} / 20
                                 </mat-hint>
                             </mat-form-field>
                         </div>
@@ -66,9 +71,10 @@
                     <div class="col-md-6 col-sm-12 col-xs-12">
                         <div class="mb-3 d-flex justify-content-center">
                             <mat-form-field>
-                                <input matInput #password placeholder="password" maxlength="50" formControlName="password" />
+                                <mat-label >Contraseña</mat-label>
+                                <input matInput #password maxlength="15" formControlName="password" />
                                 <mat-hint align="end">
-                                {{password.value.length}} / 50
+                                {{password.value.length}} / 15
                                 </mat-hint>
                             </mat-form-field>
                         </div>
@@ -82,8 +88,6 @@
                     
                 </form>
             </mat-card-content>
-
-           
         </mat-card>
         <!-- /Material Input -->
         </div>   

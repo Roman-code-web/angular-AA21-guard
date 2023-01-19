@@ -11,7 +11,8 @@
                     <!-------usuario----->
                     <div class="mb-3 d-flex justify-content-center">
                         <mat-form-field>
-                            <input matInput #usuario placeholder="usuario" maxlength="50" formControlName="usuario" />
+                            <mat-label >usuario</mat-label>
+                            <input matInput #usuario  maxlength="50" formControlName="usuario" />
                             <mat-hint align="end">
                             {{usuario.value.length}} / 50
                             </mat-hint>
@@ -20,7 +21,8 @@
                     <!-------contraseña----->
                     <div class="mb-3 d-flex justify-content-center">
                         <mat-form-field>
-                            <input matInput #password placeholder="password" maxlength="15" formControlName="password" />
+                            <mat-label >Contraseña</mat-label>
+                            <input matInput #password maxlength="15" formControlName="password" />
                             <mat-hint align="end">
                             {{password.value.length}} / 15
                             </mat-hint>
