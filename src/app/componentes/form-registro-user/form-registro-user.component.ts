@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ValidExit } from 'src/app/guard/InterfazExit.component';
+import { DatauserService } from 'src/app/servicios/datauser.service';
 import Swal from 'sweetalert2';
 
 
@@ -15,7 +16,7 @@ export class FormRegistroUserComponent implements OnInit, ValidExit {
   formRegistroUser!:FormGroup;
   guardado=false;
   //2.constructor
-  constructor(private formRegistrobuilder:FormBuilder ){
+  constructor(private formRegistrobuilder:FormBuilder, private datauser:DatauserService ){
   }
 
   ngOnInit(): void {
@@ -53,8 +54,10 @@ export class FormRegistroUserComponent implements OnInit, ValidExit {
         icon: 'success',
         title: 'Usuario Registrado',  
       })
+      this.datauser.listaUser.push(this.formRegistroUser.value) ;
+      
       this.formRegistroUser.reset();
-    
+      
     }
   }
  

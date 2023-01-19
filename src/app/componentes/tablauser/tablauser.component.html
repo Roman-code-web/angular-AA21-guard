@@ -1,0 +1,25 @@
+
+<div class="container" *ngIf="datauser.listaUser!=false">
+    <table class="table table-responsive">
+        <thead class="bg-primary">
+          <tr>
+            <th scope="col">Nombre</th>
+            <th scope="col">Apellido</th>
+            <th scope="col">Usuario</th>
+            <th scope="col">Contraseña</th>
+            <th scope="col">Telefono</th>
+            <th scope="col">Direccion</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of datauser.listaUser">
+            <td scope="row">{{user.nombre}}</td>
+            <td scope="row">{{user.apellido}}</td>
+            <td scope="row">{{user.usuario}}</td>
+            <td scope="row">{{user.password}}</td>
+            <td scope="row">{{user.telefono}}</td>
+            <td scope="row">{{user.direccion}}</td>
+          </tr>
+        </tbody>
+      </table>
+</div>
