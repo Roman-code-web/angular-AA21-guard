@@ -2,19 +2,23 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormloginComponent } from './formlogin/formlogin.component';
 import {  ReactiveFormsModule } from '@angular/forms';
+import { FormRegistroUserComponent } from './form-registro-user/form-registro-user.component';
 
 
 
 @NgModule({
   declarations: [
-    FormloginComponent
+    FormloginComponent,
+    FormRegistroUserComponent
   ],
   imports: [
     CommonModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ], 
   exports:[
-    FormloginComponent
+    FormloginComponent,
+    FormRegistroUserComponent,
+    
   ]
 })
 export class ComponentesModule { }

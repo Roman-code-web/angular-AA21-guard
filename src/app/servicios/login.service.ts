@@ -9,6 +9,7 @@ export class LoginService {
   logeado=false;
   constructor() { }
 
+  //funcion de validar usuario y logear
   login(user:string, pass:string){
     if(user===this.usuario && pass===this.password){
       localStorage.setItem('login',JSON.stringify({'usuario':user,'password':pass}));
@@ -19,12 +20,8 @@ export class LoginService {
       return false;
     }  
   }
-  
-  logout(){
-    localStorage.removeItem('login');
-    this.logeado=false;
-  }
 
+  //funcion para verificar que esta logeado
   islogin(){
     if(localStorage.getItem('login')){
       this.logeado=true;
@@ -34,4 +31,9 @@ export class LoginService {
       return false;
     }
   }
+    //funcion para salir
+    logout(){
+      localStorage.removeItem('login');
+      this.logeado=false;
+    }
 }

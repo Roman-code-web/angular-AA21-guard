@@ -13,15 +13,15 @@ export class RegistropermisoGuard implements CanActivate {
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
     const islogin=this.loginservice.islogin();
-
+    
+    //si esta logeado que muestre la pagina registro
     if(islogin){
       return true;
     }else{
+    //que me envie al login  
       this.router.navigate(['/'])
       return false
     }
-      
-
     
   }
   
