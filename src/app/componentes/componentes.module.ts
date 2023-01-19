@@ -4,6 +4,7 @@ import { FormloginComponent } from './formlogin/formlogin.component';
 import {  ReactiveFormsModule } from '@angular/forms';
 import { FormRegistroUserComponent } from './form-registro-user/form-registro-user.component';
 import { TablauserComponent } from './tablauser/tablauser.component';
+import { MaterialModule } from '../material.module';
 
 
 
@@ -16,6 +17,7 @@ import { TablauserComponent } from './tablauser/tablauser.component';
   imports: [
     CommonModule,
     ReactiveFormsModule,
+    MaterialModule
   ], 
   exports:[
     FormloginComponent,

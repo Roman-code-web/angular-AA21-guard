@@ -30,3 +30,26 @@
         </div>
     </div>
 </div>
+<div class="conntainer">
+    <!-- Material Input -->
+<mat-card class="app-input-section">
+    <mat-card-content>
+      <h2 class="example-h2">login</h2>
+      <!-------usuario----->
+      <mat-form-field>
+        <input matInput #usuario placeholder="usuario" maxlength="50" />
+        <mat-hint align="end">
+          {{usuario.value.length}} / 50
+        </mat-hint>
+      </mat-form-field>
+      <!-------contraseña----->
+      <mat-form-field>
+        <input matInput #password placeholder="password" maxlength="15" />
+        <mat-hint align="end">
+          {{password.value.length}} / 15
+        </mat-hint>
+      </mat-form-field>
+    </mat-card-content>
+  </mat-card>
+  <!-- /Material Input -->
+</div>
